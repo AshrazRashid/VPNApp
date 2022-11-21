@@ -311,3 +311,13 @@ def isNewArchitectureEnabled() {
     // - Set an environment variable `ORG_GRADLE_PROJECT_newArchEnabled=true`
     return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
 }
+
+
+
+task wrapper(type: Wrapper){
+    gradleVersion = '7.5.1'
+}
+
+task prepareKotlinBuildScriptModel {
+
+}

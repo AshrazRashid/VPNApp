@@ -9,4 +9,4 @@ const CountryScreen = () => {
   );
 };
 
-export default {CountryScreen};
+export default CountryScreen;
