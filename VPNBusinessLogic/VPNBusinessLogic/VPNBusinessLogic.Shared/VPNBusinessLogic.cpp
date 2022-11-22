@@ -1,4 +1,7 @@
 #include "VPNBusinessLogic.h"
+#include <sstream>
+#include <iostream>
+#include <cpr/cpr.h>
 
 #define PLATFORM_ANDROID 0
 #define PLATFORM_IOS 1
@@ -18,6 +21,14 @@ char * VPNBusinessLogic::getTemplateInfo()
 
 VPNBusinessLogic::VPNBusinessLogic()
 {
+
+	/*std::ostringstream os;
+	os << curlpp::options::Url(std::string("https://apps-ivacy.s3.amazonaws.com/premium/ios/6.2.0/data.json"));
+
+		string asAskedInQuestion = os.str();*/
+
+	auto response = cpr::Get(cpr::Url( "https://apps-ivacy.s3.amazonaws.com/premium/ios/6.2.0/data.json" ));
+	std::cout << response.text << std::endl;
 }
 
 VPNBusinessLogic::~VPNBusinessLogic()
