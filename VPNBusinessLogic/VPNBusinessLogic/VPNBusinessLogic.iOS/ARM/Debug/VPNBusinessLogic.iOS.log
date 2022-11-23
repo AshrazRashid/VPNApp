@@ -1,0 +1,1 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Application Type\iOS\1.0\iOS.Common.targets(345,5): error MSB4044: The "VCRemoteClean" task was not given a value for the required parameter "RemoteRootDirectory".

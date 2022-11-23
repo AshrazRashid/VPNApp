@@ -1,7 +1,11 @@
 #include "VPNBusinessLogic.h"
 #include <sstream>
-#include <iostream>
-#include <cpr/cpr.h>
+
+
+#define CPPHTTPLIB_OPENSSL_SUPPORT
+#include "path/to/httplib.h"
+
+
 
 #define PLATFORM_ANDROID 0
 #define PLATFORM_IOS 1
@@ -27,8 +31,17 @@ VPNBusinessLogic::VPNBusinessLogic()
 
 		string asAskedInQuestion = os.str();*/
 
-	auto response = cpr::Get(cpr::Url( "https://apps-ivacy.s3.amazonaws.com/premium/ios/6.2.0/data.json" ));
-	std::cout << response.text << std::endl;
+	//auto response = cpr::Get(cpr::Url( "https://apps-ivacy.s3.amazonaws.com/premium/ios/6.2.0/data.json" ));
+	//std::cout << response.text << std::endl;
+
+	httplib::Client; cli("https://apps-ivacy.s3.amazonaws.com/premium/ios/6.2.0/data.json");
+
+	auto res = cli.Get("/hi");
+	res->status;
+	res->body;
+
+
+	// HTTPS
 }
 
 VPNBusinessLogic::~VPNBusinessLogic()
