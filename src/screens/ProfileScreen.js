@@ -1,11 +1,12 @@
 import * as React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
+import {Container} from '../component';
 
 const ProfileScreen = () => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <Container>
       <Text>Country!</Text>
-    </View>
+    </Container>
   );
 };
 
